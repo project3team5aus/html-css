@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- inspiration from http://nba.spencersharpe.com/ -->
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NBA 2018-19 Winner Predictions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/main.js"></script> -->
+</head>
+
+<body>
+    <nav class="navbar">
+        <h4 class="navbar-header text-left">2018-19 NBA Predictions</h4>
+        <!-- NBA logo from our github -->
+        <img class="navbar-logo" src="https://avatars0.githubusercontent.com/u/46196269?s=200&amp;v=4" alt="@project3team5aus">
+    </nav>
+
+    <!-- container for top of page -->
+    <div class="container-fluid">
+        <!-- header row -->
+        <div class="row">
+            <div class="col-sm">
+                <br>
+                <h3 class="text-center">Today's Scheudled Games</h3>
+                <h4 class="text-center today_date">[INSERT DATE]</h4>
+                <br>
+            </div>
+        </div>
+        <!-- Road/Home labels above -sm breakpoint -->
+        <div class="row">
+            <div class="col-sm-2">
+                <h6 class="text-center">Game Info</h6>
+            </div>
+            <div class="col-sm">
+                <h6 class="text-center">Road Team</h6>
+            </div>
+            <!-- this is extra space for the "--AT--" text in each game row -->
+            <div class="col-sm-2"></div>
+            <div class="col-sm">
+                <h6 class="text-center">Home Team</h6>
+            </div>
+        </div>
+        <hr>
+    <!-- close top of page container -->
+    </div>
+
+
+    <!-- Separate container to hold auto-populated games -->
+    <!-- D3.js select on container class "today_games" -->
+    <div class="container-fluid today_games">
+
+        <!-- Auto-populate game rows via D3.js -->
+
+
+        <!-- game 1 row -->
+        <div class="row">
+            <!-- game details -->
+            <div class="col-sm-2 vert_align">
+                <p class="text-center">10/16/18 8:00 PM</p>
+                <p class="text-center">TD Garden</p>
+            </div>
+
+            <!-- road team -->
+            <div class="col-sm">
+                <!-- add "rounded border border-success" classes to figure for predicted winner -->
+                <figure class="figure center">
+                    <img img class="center" src="https://www.nba.com/assets/logos/teams/primary/web/PHI.svg" class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption text-center">Philadelphia 76ers</figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-2 vert_align"><p class="text-center">-- AT --</p></div>
+
+            <!-- home team -->
+            <div class="col-sm">
+                <!-- add "rounded border border-success" classes to figure for predicted winner -->
+                <figure class="figure center rounded border border-success">
+                    <img class="center" src="https://www.nba.com/assets/logos/teams/primary/web/BOS.svg" class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption text-center">Boston Celtics</figcaption>
+                </figure>
+            </div>
+        <!-- close game row and add line break-->
+        </div>
+        <hr>
+
+
+        <!-- game 2 row -->
+        <!-- ... -->
+
+
+
+    <!-- closes content container -->
+    </div>
+</body>
+
+</html>
