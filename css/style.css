@@ -19,11 +19,25 @@
   margin-right: auto;
 }
 
+.team-logo {
+  width: 50%;
+  height: 50%;
+}
+
 .vert_align {
   display: block;
   margin-top: auto;
   margin-bottom: auto;
 }
+
+/* reduce team logo sizes for small screens */
+@media (max-width: 575px) {
+  .team-logo {
+    width: 15%;
+    height: 15%;
+  }
+}
+
 
 /*  extra CSS from original source
 .ncaa {
