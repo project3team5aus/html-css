@@ -27,7 +27,7 @@
             <div class="col-sm">
                 <br>
                 <h3 class="text-center">Today's Scheduled Games</h3>
-                <h4 class="text-center today_date">[INSERT TODAY'S DATE]</h4>
+                <h4 id="today_date" class="text-center">[INSERT TODAY'S DATE]</h4>
                 <p class="text-center">A green box indicates the predicted winning team.</p>
                 <br>
             </div>
@@ -53,7 +53,7 @@
 
     <!-- Separate container to hold auto-populated games -->
     <!-- D3.js select on container class "today_games" -->
-    <div class="container-fluid today_games">
+    <div id="today_games" class="container-fluid">
 
         <!-- Auto-populate game rows via D3.js -->
 
@@ -126,6 +126,8 @@
     <!-- closes content container -->
     </div>
 
+    <!-- import d3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <!-- read in hard-coded data as example -->
     <script src="../js/data.js"></script>
     <!-- run custom JS script to populate game HTML rows -->
