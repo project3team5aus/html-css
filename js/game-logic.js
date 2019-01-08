@@ -13,49 +13,101 @@ console.log(gamesData);
 var gameContainer = d3.select("div#today_games");
 d3.selectAll("div#today_games > *").remove();
 
-// creates new game row, and first div column with game time
-gameContainer
-    .append('div')
-    .classed('row no-gutters', true)
-    .append('div')
-    .classed('col-sm-2 vert_align', true)
-    .append('h6')
-    .classed('text-center', true)
-    .text("INSERT GAME TIME HERE");
-
-// adding the second line to the game details div for the game location is not working. :(
-d3.select("div.col-sm-2 vert_align")
-    .append('h6');
-    // .classed('text-center', true)
-    // .text("INSERT GAME LOCATION HERE");   
-
-// // create new Div rows for each game object
-// gameContainer.selectAll("div")
-//     .data(gamesData)
-//     .enter()
-//     .append('div')
-//     .html('<div class="row no-gutters"></div><hr>');
-
-
-// // create div col sections
-// var gameColumns = ["details", "Road Team", "Home Team"]
-// var games = d3.selectAll("div.row no-gutters");
-// games.append('div')
-//     .text('game details')
-//     .classed('col-sm-2 vert_align', true);
-
-// games.append('div')
-//     .text('Road team');
-
-// use condional on "road_win_prediction" = Win|Loss
-
-
-
 
 // loop through game objects in data
 gamesData.forEach(function(game) {
     console.log(game);
 });
+// wrap the below game builder inside the loop
+
+// ============================================================
+// // create new Div rows for each game object
+
+// creates new game row, 
+game0 = gameContainer
+    .append('div')
+    .attr('id', 'game0')
+    .classed('row no-gutters', true);
+
+// divider between game div rows
+gameContainer.append('hr');
+
+// add first child div column with game time and location
+game0.append('div')
+    .attr('id', 'timeLoc0')
+    .classed('col-sm-2 vert_align', true)
+    // add heading tag for game time
+    .append('h6')
+    .attr('id', 'time0')
+    .classed('text-center', true)
+    .text("INSERT GAME TIME HERE");
+
+// update the time text
+d3.select('h6#time0').text(gamesData[0].date);
+
+// adding the second line to the game details div for the game location is not working.
+d3.select("div#timeLoc0")
+    .append('h6')    
+    .attr('id', 'loc0')
+    .classed('text-center', true)
+    .text("INSERT GAME LOCATION HERE");
+
+// update the time text
+d3.select('h6#loc0').text(gamesData[0].location);
+
+// create road team div
+game0.append('div')
+    .attr('id', 'roadTeam0')
+    .classed('col-sm', true)
+    .append('figure')
+    .attr('id','roadFig0')
+    .classed('figure center', true)
+    .append('img')
+    .attr('id', 'roadLogo0')
+    .classed('center team-logo', true);
+
+d3.select('figure#roadFig0').append('figcaption')
+    .classed('figure-caption text-center', true)
+    .text(gamesData[0].road_team);
+
+// update the image
+d3.select('img#roadLogo0').attr('src', gamesData[0].road_team_logo);
+
+
+// "-- AT --" divider
+game0.append('div')
+    .classed('col-sm-2 vert_align', true)
+    .append('p')
+    .classed('text-center', true)
+    .text('-- AT --');
+
+
+// create home team div
+game0.append('div')
+    .attr('id', 'homeTeam0')
+    .classed('col-sm', true)
+    .append('figure')
+    .attr('id','homeFig0')
+    .classed('figure center', true)
+    .append('img')
+    .attr('id', 'homeLogo0')
+    .classed('center team-logo', true);
+
+d3.select('figure#homeFig0').append('figcaption')
+    .classed('figure-caption text-center', true)
+    .text(gamesData[0].home_team);
+
+// update the image
+d3.select('img#homeLogo0').attr('src', gamesData[0].home_team_logo);
+
+// conditional statment to update team logos with win prediction
+// if road_win_prediction === "Win" then update as:
+// d3.select('figure#roadFig0').attr('class','figure center rounded border border-success')
+// else:
+// d3.select('figure#homeFig0').attr('class','figure center rounded border border-success')
+
+// ==================================================================================
+
 
 
 // select H4 header text for "Today's Date" by id #today_date
