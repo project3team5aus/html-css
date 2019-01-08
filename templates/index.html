@@ -50,81 +50,43 @@
     <!-- close top of page container -->
     </div>
 
-
     <!-- Separate container to hold auto-populated games -->
-    <!-- D3.js select on container class "today_games" -->
     <div id="today_games" class="container-fluid">
 
-        <!-- Auto-populate game rows via D3.js -->
-
-
-        <!-- game 1 row -->
+        <!-- game row template html -->
+        <!-- Auto-populate game rows via D3 in logic.js -->
         <div class="row no-gutters">
-            <!-- game details -->
+            <!-- game details div.col-sm-2 -->
             <div class="col-sm-2 vert_align">
-                <h6 class="text-center">10/16/18 8:00 PM</h6>
-                <h6 class="text-center">TD Garden</h6>
+                <h6 class="text-center">[INSERT GAME TIME]</h6>
+                <h6 class="text-center">[INSERT GAME LOCATION]</h6>
             </div>
 
-            <!-- road team -->
+            <!-- road team div.col-sm -->
             <div class="col-sm">
                 <!-- add "rounded border border-success" classes to figure for predicted winner -->
                 <figure class="figure center rounded border border-success">
-                    <img class="center team-logo" src="https://www.nba.com/assets/logos/teams/primary/web/PHI.svg">
-                    <figcaption class="figure-caption text-center">Philadelphia 76ers</figcaption>
-                </figure>
-            </div>
-
-            <div class="col-sm-2 vert_align"><p class="text-center">-- AT --</p></div>
-
-            <!-- home team -->
-            <div class="col-sm">
-                <!-- add "rounded border border-success" classes to figure for predicted winner -->
-                <figure class="figure center rounded border border-success">
-                    <img class="center team-logo" src="https://www.nba.com/assets/logos/teams/primary/web/BOS.svg">
-                    <figcaption class="figure-caption text-center">Boston Celtics</figcaption>
-                </figure>
-            </div>
-        <!-- close game row and add line break-->
-        </div>
-        <hr>
-
-
-
-        <!-- game 2 row -->
-        <div class="row no-gutters">
-            <!-- game details -->
-            <div class="col-sm-2 vert_align">
-                <h6 class="text-center">[INSERT TIME AND DATE]</h6>
-                <h6 class="text-center">[INSERT LOCATION]</h6>
-            </div>
-
-            <!-- road team -->
-            <div class="col-sm">
-                <!-- add "rounded border border-success" classes to figure for predicted winner -->
-                <figure class="figure center rounded border border-success">
-                    <img class="center team-logo" src="[INSERT ROAD TEAM LOGO URL]">
+                    <img class="center team-logo" src="#">
                     <figcaption class="figure-caption text-center">[INSERT ROAD TEAM NAME]</figcaption>
                 </figure>
             </div>
 
+            <!-- divider div.col-sm-2 for "-- AT --" text -->
             <div class="col-sm-2 vert_align"><p class="text-center">-- AT --</p></div>
 
-            <!-- home team -->
+            <!-- home team div.col-sm-->
             <div class="col-sm">
                 <!-- add "rounded border border-success" classes to figure for predicted winner -->
                 <figure class="figure center rounded border border-success">
-                    <img class="center team-logo" src="[INSERT HOME TEAM LOGO URL]">
+                    <img class="center team-logo" src="#">
                     <figcaption class="figure-caption text-center">[INSERT ROAD TEAM NAME]</figcaption>
                 </figure>
             </div>
         <!-- close game row and add line break-->
         </div>
         <hr>
-
-
-    <!-- closes content container -->
     </div>
+    <!-- closes content container -->
 
     <!-- import d3.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
